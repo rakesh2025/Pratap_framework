@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+<listeners>
+<listener class-name="com.crm.genericUtils.Listeners"></listener>
+</listeners>
+  <test thread-count="2" parallel="tests" name="Test1">
+    <classes>
+      <class name="com.crm.Vtiger.CreateOrganisation.CreateOrganisationWithCopyBillingAddress_Test"/>
+      <class name="com.crm.Vtiger.CreateOrganisation.CreateOrganisationWithoutShippingAddress_Test"/>
+      <class name="com.crm.Vtiger.CreateOrganisation.CreateOrganisationWithCopyShippingAddress_Test"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="2" parallel="tests" name="Test2">
+    <classes>
+      <class name="com.crm.Vtiger.CreateOrganisation.CreateOrganisationWithBillingAddress_Test"/>
+      <class name="com.crm.Vtiger.CreateOrganisation.CreateOrganisationWithShippingAddress_Test"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
